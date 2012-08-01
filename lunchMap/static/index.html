@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Map of Meio</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false&region=PT"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+<script type="text/javascript" src="js/jquery.imagesloaded.js"></script>
+<script type="text/javascript" src="js/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="js/fancybox/jquery.easing-1.3.pack.js"></script>
+<script type="text/javascript" src="js/fancybox/jquery.mousewheel-3.0.4.pack.js"></script>
+<script type="text/javascript" src="js/master.js"></script>
+<script type="text/javascript" src="js/callfancybox.js"></script>
+<link rel="Shortcut Icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="CSS/style.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+</head>
+<body onload=load_map()>
+	<div id="navigation">
+			<ul id="main-nav" class="nav-list">
+			    <li><a href="/" rel="address:/">Terrain Map</a></li>
+			    <li><a id="nav-about" href="img/panorama.jpg" title="Meio-terra, meaning the middle land in Portuguese, was formed as the center country and world
+capital for harnessing clean energy and keeping a just and fair government. The center city; simply
+called Meio is the capital of both Meio-terra and of the world. Its organization is a circular middle
+sector with specific professional communities radiating out in all directions. In this way the sections
+of professionals can choose to live amongst like minded people, or they can choose to live
+in the circular center where all can live mixed in one center place." >About<img class="hidden" src="img/panorama.jpg" alt="" /></a></li>
+				<li><a id="thumbnails" href="#data">Photos</a></li>
+                
+			</ul>
+			<ul id="sub-nav" class="nav-list">
+               <!-- <li><a id="nav-economy" href="cities/economy" >Economy<img class="hidden" src="cities/panorama.jpg" alt="" /></a></li>-->
+			    <li><a id="nav-government" href="img/gov.jpg" title="The government in Meio is fairly small and democratic. It's 4 leaders are selected on a popular
+vote every 4 years. Each year ONE out of the four rotates out so that there are always three
+experienced leaders in office. This makes for easier transition of knowledge from one leader to
+the next. Each leader also has a specific hemisphere that they have the ultimate jurisdiction over
+in terms of environmental control and economic responsibility, keeping the markets in check. Meio
+itself is not involved in the world stock market but merely acts as a mediator between the rest of
+the world, keeping all trades between countries fair and even.">Government<img class="hidden" src="img/gov.jpg" alt="" /></a></li>
+              	<li><a class="education" id="nav-education" rel="group2" href="img/different-languages.jpg" title="learning different languages">Education<img class="hidden" src="img/different-languages.jpg" alt=""/></a></li>
+                <li><a class="technology" id="nav-tech" rel="group1" href="img/fartube.jpg" title="">Technology<img class="hidden" src="img/fartube.jpg" alt=""/></a></li>	
+			</ul>
+			
+	</div> <!--end of div navigation-->
+    
+<div style="display:none">
+    <div id="edu">
+        <a class="education" rel="group2" href="img/parts.jpg" title="be creative in learning"><img src="img/parts.jpg" alt=""/></a>
+        <a class="education" rel="group2" href="img/world-map.jpg" title="young Meions usually spend a year abroad before college"><img src="img/world-map.jpg" alt=""/></a>
+    </div>
+</div>
+<div style="display:none"><div id="data">This section will display thumbnails of all pictures. To be implemented.</div></div>
+
+<div style="display:none"><div id="tech">
+<a class="technology" rel="group1" href="img/copy_cow.jpg" title="fart tube on a cow"><img src="img/copy_cow.jpg" alt=""/></a>
+<a class="technology" rel="group1" href="photo/9.jpg" title="Schema of biogas"><img src="photo/9.jpg" alt=""/></a>
+<a class="technology" rel="group1" href="photo/27.jpg" title="How wind power works"><img src="photo/27.jpg" alt=""/></a>
+<a class="technology" rel="group1" href="photo/12.jpg" title="maglev train"><img src="photo/12.jpg" alt=""/></a>
+<a class="technology" rel="group1" href="img/pervasive_use.jpg" title="Pervasive Use of Information Technology"><img src="img/pervasive_use.jpg" alt=""/></a>
+</div>
+</div>
+
+    
+<div id="map_canvas"></div>
+</body>
+</html>

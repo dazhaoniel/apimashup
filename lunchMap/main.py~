@@ -1,0 +1,43 @@
+def showmap():
+    from pymaps import Map, PyMap # import the libraries
+
+    # Create a map - pymaps allows multiple maps in an object
+    tmap = Map()
+    tmap.zoom = 3
+
+    # Latitude and lognitude - see the getcords function
+    # to see how we convert from traditional D/M/S to the DD type
+    # used by Googel Maps
+
+    lat = 0.0
+    long = 0.0
+
+    # These coordinates are for Hong Kong
+    dlat = "22 15 0 N"
+    dlong = "114 10 60 E"
+
+    dlat = dcode.lat.split(" ")
+    dlong = dcode.long.split(" ")
+
+    # Convert the coordinates
+    lat = getcords(float(dlat[0]), float(dlat[1]), float(dlat[2]), dlat[3])
+    long = getcords(float(dlong[0]), float(dlong[1]), float(dlong[2]), dlong[3])
+
+    # Inserts html into the hover effect
+    pointhtml = "Hello!"
+
+    # Add the point to the map
+    point = (lat, long, pointhtml, icon.id)
+
+    tmap.setpoint(point)
+    tmap.center = (1.757537,144.492188)
+
+    # Put your own googl ekey here
+    gmap = PyMap(key=GOOGLE_KEY, maplist=[tmap])
+    gmap.addicon(icon)
+
+    # pymapjs exports all the javascript required to build the map!
+    mapcode = gmap.pymapjs()
+
+    # Do what you want with it - pass it to the template or print it!
+    return mapcode
