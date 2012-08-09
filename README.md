@@ -2,6 +2,7 @@ apimashup
 =========
 
 Author: Daniel Zhao ( danielantoiny@gmail.com )
+Online Repository: https://github.com/dazhaoniel/apimashup
 
 This is a simple GIS web applications for searching restaurants data and view restaurant locations on Google Map. 
 
