@@ -1,0 +1,6 @@
+{% for dart in darts %}
+    <div id="{{dart.id}}" class="dart linkOFF">
+       ジャンル: {{dart.cat}} <br /> 
+       レストラン: {{dart.name}} <a href="{{dart.url}}" target="_blank">詳細ページ</a>
+    </div>
+{% endfor %}

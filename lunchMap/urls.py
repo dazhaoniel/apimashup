@@ -8,7 +8,8 @@ from lunchMap.views import *
 urlpatterns = patterns('',
     # Examples:
     url( r'^$', index, name='lunchMap_index'),
-    url( r'^search-form/$', search_form, name='lunchMap_searchform'),
+    url( r'^search/$', search, name='lunchMap_search'),
+    
     # url(r'^panel/$', panel, name='twitterPanel_panel'),
     # url(r'^update/$', update, name='twitterPanel_update'),
 

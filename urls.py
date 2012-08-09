@@ -15,5 +15,5 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
     
-    ( r'^lunchMap/', include( 'lunchMap.urls' ) ),  
+    ( r'', include( 'apimashup.lunchMap.urls' ) ),  
 )
